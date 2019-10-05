@@ -55,10 +55,12 @@ $(".oponent").on("click", function(){
 //reasign non-clicked character classes
 //change display/output
 //buttons? attack/defend?
-//*selct oponent
+//*selct oponent /// Defender
 //*loop through attacks untill win/defeat
+    //display stat changes and power levels
+    //attack power remains new larger number when new enemy is selected
 //*select new oponent
 //*loop through attacks untill win/defeat
 //*last oponent
 //*loop through attacks untill win/defeat
-//win/lose /game-over screen
+//win/lose /game-over screen // restart button
