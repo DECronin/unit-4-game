@@ -1,39 +1,60 @@
-var compNumber = Math.floor(Math.random() * 83 + 46);
-var guessCount = 0;
-var elements = [];
+$(document).ready(function () {
 
-$("#computer-random").text(compNumber);
+        var compNumber = Math.floor(Math.random() * 83 + 46);
+        var guessCount = 0;
+        var elements = [];
+        var wins = 0;
+        var loses = 0;
+        var elementStrength = 0;
 
-for (var i = 0; i < 4; i++) {
-    elements[i] = Math.floor(Math.random() * 25);
-    var imageElement = $("<img>");
-    imageElement.addClass("element-image");
-    imageElement.attr("data-elementstrength", elements[i]);
-    $("#element").append(imageelement);
-}
-//imageelement.attr("url", "")
-//elements[0 - 3] assign images;
+        for (var i = 0; i < 4; i++) {
+                elements[i] = Math.floor(Math.random() * 25);
+                var imageElement = $("<img>");
+                imageElement.addClass("element-image");
+                imageElement.attr('id', 'img' + i);
+                imageElement.attr("css", 'img' + i);
+                imageElement.attr("data-elementstrength", elements[0]);
+                $("#element").append(imageElement);
+        };
 
-$(".element-image").on("click", function () {
-    var elementStrength = ($(this).attr("data-elementstrength"));
-    elementStrength = parseInt(elementStrength);
-    guessCount += elementStrength;
+        function newRound() {
+                 compNumber = Math.floor(Math.random() * 83 + 46);
+                 guessCount = 0;
+                 elements = [];
+                 elementStrength = 0;
+        }
 
-    alert("Working! " + guessCount);
-    console.log(guessCount);
+        function compare() {
+                if (guessCount === compNumber) {
+                        wins++;
+                        newRound();
+                }
 
-    if (guessCount === compNumber) {
-        alert("You win!");
-    }
+                else if (guessCount >= compNumber) {
+                        loses++;
+                        newRound();
+                } 
+        }
 
-    else if (guessCount >= compNumber) {
-        alert("You lose!!");
-    }
+        function display(){
+                $("#computer-random").text(compNumber);
+                $("#guess-count").text(guessCount);
+                $("#wins").text(wins);
+                $("#loses").text(loses);
+        }
 
+
+        $(".element-image").on("click", function () {
+                elementStrength = ($(this).attr("data-elementstrength"));
+                elementStrength = parseInt(elementStrength);
+                guessCount += elementStrength;
+                display();
+                compare();
+        });
+
+        $("#restart").on("click", function(){
+                alert("Begin New Round!");
+                newRound();
+                display();
+        });
 });
-
-        //NewRound / restart button
-        //wins
-        //loses
-        //rules
-        //total score instead of alerts
