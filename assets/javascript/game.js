@@ -1,66 +1,39 @@
-//==  GLOBAL VARIABLES  ==//
-//========================//
-var baseAttack = 7;
+var compNumber = Math.floor(Math.random() * 83 + 46);
+var guessCount = 0;
+var elements = [];
 
-// var opt1 = {
-//     health: ,
-//     counterAttack: ,
-// }
-// var opt2 = {
-//     health: ,
-//     counterAttack: ,
-// }
-// var opt3 = {
-//     health: ,
-//     counterAttack: ,
-// }
-// var opt4 = {
-//     health: ,
-//     counterAttack: ,
-// }
+$("#computer-random").text(compNumber);
 
-
-//===   FUNCTIONS   ===//
-//=====================//
-function display(){
-
+for (var i = 0; i < 4; i++) {
+    elements[i] = Math.floor(Math.random() * 25);
+    var imageElement = $("<img>");
+    imageElement.addClass("element-image");
+    imageElement.attr("data-elementstrength", elements[i]);
+    $("#element").append(imageelement);
 }
-function user(){
+//imageelement.attr("url", "")
+//elements[0 - 3] assign images;
 
-}
-function oponent(){
+$(".element-image").on("click", function () {
+    var elementStrength = ($(this).attr("data-elementstrength"));
+    elementStrength = parseInt(elementStrength);
+    guessCount += elementStrength;
 
-}
+    alert("Working! " + guessCount);
+    console.log(guessCount);
 
-//when chooseing/assigning hero:
-//assign base attack?
-//var attack?
-//increases by base attack power with each click
+    if (guessCount === compNumber) {
+        alert("You win!");
+    }
 
-//==  CALLS / EVENTS  ==//
-//======================//
-$(".characters").on("click", function(){
-
-});
-$(".oponent").on("click", function(){
+    else if (guessCount >= compNumber) {
+        alert("You lose!!");
+    }
 
 });
 
-
-/////    brainstorming?      //
-//===========================//
-// dislay start screen
-//set character objects
-//select character
-//reasign non-clicked character classes
-//change display/output
-//buttons? attack/defend?
-//*selct oponent /// Defender
-//*loop through attacks untill win/defeat
-    //display stat changes and power levels
-    //attack power remains new larger number when new enemy is selected
-//*select new oponent
-//*loop through attacks untill win/defeat
-//*last oponent
-//*loop through attacks untill win/defeat
-//win/lose /game-over screen // restart button
+        //NewRound / restart button
+        //wins
+        //loses
+        //rules
+        //total score instead of alerts
