@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>simple crystal game</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="./assets/javascript/game.js"></script>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
@@ -12,10 +13,17 @@
 </head>
 <body>
 
-  <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+  <h1>Balance Target: <span id="computer-random"></span></h1>
+  <h2>Your Number: <span id="guess-count"></span></h2>
 
   <div id="element">
   </div>
+  <div id="scoring">
+    <h3>Wins: <span id="wins"></span></h3>
+    <h3>Loses: <span id="loses"></span></h3>
+  </div>
+
+  <button id="restart">Restart</button>
 
 </body>
 </html>
