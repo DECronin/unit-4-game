@@ -6,48 +6,58 @@ $(document).ready(function () {
         var wins = 0;
         var loses = 0;
         var elementStrength = 0;
-
+        var user = 0;
+                
         for (var i = 0; i < 4; i++) {
-                elements[i] = Math.floor(Math.random() * 25);
+                elements[i] = Math.floor(Math.random() * 25 + 7);
                 var imageElement = $("<img>");
                 imageElement.addClass("element-image");
                 imageElement.attr('id', 'img' + i);
                 imageElement.attr("css", 'img' + i);
-                imageElement.attr("data-elementstrength", elements[0]);
+                imageElement.attr("data-elementstrength", elements[i]);
                 $("#element").append(imageElement);
-        };
+        }
 
         function newRound() {
                  compNumber = Math.floor(Math.random() * 83 + 46);
                  guessCount = 0;
-                 elements = [];
+                 user = 0;
                  elementStrength = 0;
-        }
+                 for (var i = 0; i < 4; i++) {
+                        elements[i] = Math.floor(Math.random() * 25 + 7);
+                 }
+                 display();
+        };
 
         function compare() {
-                if (guessCount === compNumber) {
+                if (user === compNumber) {
                         wins++;
+                        alert("You've Won! New Round Begins");
                         newRound();
                 }
 
-                else if (guessCount >= compNumber) {
+                else if (user >= compNumber) {
                         loses++;
+                        alert("You've lost! New Round Begins")
                         newRound();
                 } 
         }
 
         function display(){
                 $("#computer-random").text(compNumber);
-                $("#guess-count").text(guessCount);
+                $("#user").text(user);
                 $("#wins").text(wins);
                 $("#loses").text(loses);
+                console.log(elements[0]);
+                console.log(elements[1]);
+                console.log(elements[2]);
+                console.log(elements[3]);
         }
-
 
         $(".element-image").on("click", function () {
                 elementStrength = ($(this).attr("data-elementstrength"));
                 elementStrength = parseInt(elementStrength);
-                guessCount += elementStrength;
+                user += elementStrength;
                 display();
                 compare();
         });
