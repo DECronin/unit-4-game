@@ -2,15 +2,19 @@ body{
     background-image: url(../images/background-1.jpg);
     background-size: 100vw 100vh;
     text-align: center;
-    line-height: 140%;
+    line-height: 150%;
     text-shadow: rgb(172, 82, 102) 1px 0 7px;
 }
+div{
+    border-radius: 23%;
+}
 .directions{
+    font-family: 'Neucha', cursive;
     float: left;
     width: 160px;
     overflow: auto;
     color: rgb(87, 58, 20);
-    font-size: 17px;
+    font-size: 20px;
     background-color: hsl(60, 56%, 91%, 0.5);
     padding: 10px;
     font-weight: bold;
@@ -27,6 +31,7 @@ body{
     opacity: 0.9;
 }
 #scoring{
+    font-family: 'Satisfy', cursive;
     position: absolute;
     float: right;
     width: 155px;
@@ -40,6 +45,7 @@ body{
     right: 20px;
 }
 .spell{
+    font-family: 'Great Vibes', cursive;
     margin: 120px auto;
     width: 400px;
     color: burlywood;
@@ -52,7 +58,7 @@ body{
     border-radius: 950%;
     background-size: 115%;
     position: absolute;
-    opacity: 0.9;
+    opacity: 0.7;
     border: 6px rgba(0, 0, 0, 0.9) solid;
 } 
 #img0{
@@ -74,4 +80,11 @@ body{
     background-image: url(../images/veeterzy-sMQiL_2v4vs-unsplash.jpg);
     bottom: 2%;
     left: 13%;
+}
+#in-depth{
+    font-family: 'Homemade Apple', cursive;
+    background-color: rgba(129, 118, 96, 0.5);
+    border-radius: 30%;
+    color: hsl(240, 48%, 23%, 0.85);
+    padding: 20px;
 }
