@@ -20,15 +20,28 @@ div{
     font-weight: bold;
     margin: auto 5px;
 }
-#restart{
+.buttons{
     float: right;
-    width: 120px;
+    cursor: pointer;
+    position: absolute;
+    width: 140px;
+    height: 30px;
     font-size: 17px;
     font-weight: bold;
     color: rgb(48, 48, 112);
     background-color: hsl(82, 39%, 30%, 0.75);
-    margin: 25px;
+    margin: 15px;
+    right: 15px;
     opacity: 0.9;
+}
+.buttons:hover{
+    background-color: brown;
+}
+#restart{
+    bottom: 175px;
+}
+#new-game{
+    bottom: 135px;
 }
 #scoring{
     font-family: 'Satisfy', cursive;
@@ -46,7 +59,7 @@ div{
 }
 .spell{
     font-family: 'Great Vibes', cursive;
-    margin: 120px auto;
+    margin: 130px auto;
     width: 400px;
     color: burlywood;
     background-color: hsl(271, 76%, 53%, 0.45);
@@ -55,31 +68,38 @@ div{
 .element-image {
     width: 300px;
     height: 300px;
-    border-radius: 950%;
-    background-size: 115%;
+    border-radius: 100%;
+    background-size: 120%;
     position: absolute;
     opacity: 0.7;
-    border: 6px rgba(0, 0, 0, 0.9) solid;
 } 
 #img0{
-    background-image: url(../images/carissa-rogers-AvcEAILWYNE-unsplash.jpg);
+    background: url(../images/carissa-rogers-AvcEAILWYNE-unsplash.jpg);
     top: 2%;
     left: 13%;
 }
 #img1{
-    background-image: url(../images/daniel-park-qeS3bwwKb8A-unsplash.jpg);
+    background: url(../images/daniel-park-qeS3bwwKb8A-unsplash.jpg);
     top: 2%;
     right: 13%;
 }
 #img2{
-    background-image: url(../images/jong-marshes-79mNMAvSORg-unsplash.jpg);
+    background: url(../images/jong-marshes-79mNMAvSORg-unsplash.jpg);
     bottom: 2%;
     right: 13%;
 }
 #img3{
-    background-image: url(../images/veeterzy-sMQiL_2v4vs-unsplash.jpg);
+    background: url(../images/veeterzy-sMQiL_2v4vs-unsplash.jpg);
     bottom: 2%;
     left: 13%;
+}
+#img3:hover, 
+#img2:hover, 
+#img1:hover, 
+#img0:hover{
+    background: url(../images/pentagram-vector-element_fJnkMoLu_L-300x300.jpg);
+    opacity: 0.6;
+    cursor: pointer;
 }
 #in-depth{
     font-family: 'Homemade Apple', cursive;
