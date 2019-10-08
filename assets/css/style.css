@@ -1,16 +1,33 @@
+body{
+    background-image: url(../images/background-1.jpg);
+    background-size: 100vw 100vh;
+}
 .element-image {
     width: 300px;
     height: 300px;
-}
+    border-radius: 950%;
+    background-size: 115%;
+    position: absolute;
+    opacity: 0.9;
+    border: 6px rgba(0, 0, 0, 0.9) solid;
+} 
 #img0{
     background-image: url(../images/carissa-rogers-AvcEAILWYNE-unsplash.jpg);
+    top: 2%;
+    left: 13%;
 }
 #img1{
     background-image: url(../images/daniel-park-qeS3bwwKb8A-unsplash.jpg);
+    top: 2%;
+    right: 13%;
 }
 #img2{
     background-image: url(../images/jong-marshes-79mNMAvSORg-unsplash.jpg);
+    bottom: 2%;
+    right: 13%;
 }
 #img3{
     background-image: url(../images/veeterzy-sMQiL_2v4vs-unsplash.jpg);
+    bottom: 2%;
+    left: 13%;
 }
