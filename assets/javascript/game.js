@@ -6,6 +6,8 @@ $(document).ready(function () {
         var loses = 0;
         var elementStrength = 0;
         var user = 0;
+
+        var spells = [""];
                 
         for (var i = 0; i < 4; i++) {
                 elements[i] = Math.floor(Math.random() * 25 + 7);
