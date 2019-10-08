@@ -1,6 +1,50 @@
 body{
     background-image: url(../images/background-1.jpg);
     background-size: 100vw 100vh;
+    text-align: center;
+    line-height: 140%;
+    text-shadow: rgb(172, 82, 102) 1px 0 7px;
+}
+.directions{
+    float: left;
+    width: 160px;
+    overflow: auto;
+    color: rgb(87, 58, 20);
+    font-size: 17px;
+    background-color: hsl(60, 56%, 91%, 0.5);
+    padding: 10px;
+    font-weight: bold;
+    margin: auto 5px;
+}
+#restart{
+    float: right;
+    width: 120px;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(48, 48, 112);
+    background-color: hsl(82, 39%, 30%, 0.75);
+    margin: 25px;
+    opacity: 0.9;
+}
+#scoring{
+    position: absolute;
+    float: right;
+    width: 155px;
+    overflow: auto;
+    color: indigo;
+    font-size: 21px;
+    background-color: hsl(60, 56%, 91%, 0.5);
+    padding: 8px;
+    font-weight: bold;
+    top: 190px;
+    right: 20px;
+}
+.spell{
+    margin: 120px auto;
+    width: 400px;
+    color: burlywood;
+    background-color: hsl(271, 76%, 53%, 0.45);
+    padding: 35px;
 }
 .element-image {
     width: 300px;

@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
         var compNumber = Math.floor(Math.random() * 83 + 46);
-        var guessCount = 0;
         var elements = [];
         var wins = 0;
         var loses = 0;
@@ -20,7 +19,6 @@ $(document).ready(function () {
 
         function newRound() {
                  compNumber = Math.floor(Math.random() * 83 + 46);
-                 guessCount = 0;
                  user = 0;
                  elementStrength = 0;
                  for (var i = 0; i < 4; i++) {
@@ -48,10 +46,6 @@ $(document).ready(function () {
                 $("#user").text(user);
                 $("#wins").text(wins);
                 $("#loses").text(loses);
-                console.log(elements[0]);
-                console.log(elements[1]);
-                console.log(elements[2]);
-                console.log(elements[3]);
         }
 
         $(".element-image").on("click", function () {
@@ -67,4 +61,6 @@ $(document).ready(function () {
                 newRound();
                 display();
         });
+
+        display();
 });
