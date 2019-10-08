@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>simple crystal game</title>
+  <title>Crystal Elements</title>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="./assets/javascript/game.js"></script>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
 
-  <h1>Balance Target: <span id="computer-random"></span></h1>
-  <h2>Your Number: <span id="guess-count"></span></h2>
+  <div class="directions">
+    <span>Before you lie the 4 elements: Fire, Water, Earth & Air. Each one contains a differant strenght or power-level
+      that combine differantly with eachother for each spell or potion you will be conjouring. Click each element to
+      power your spell until it balances with the Required Strenght but be warned, if you go beyond this strenght then
+      the balance will tip in the oposite direction, causing the spell to over-draw and be of no use... If it doesn't
+      explode.</span>
+  </div>
+
+  <h2>Spell's Required Strength: <span id="computer-random"></span></h2>
+  <h2>Current Power: <span id="user"></span></h2>
 
   <div id="element">
   </div>
@@ -26,4 +36,5 @@
   <button id="restart">Restart</button>
 
 </body>
+
 </html>
