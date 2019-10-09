@@ -6,7 +6,7 @@ $(document).ready(function () {
         var loses = 0;
         var elementStrength = 0;
         var user = 0;
-
+        var imageElement = [];
         var spells = ["My heart ablaze and shining \
         This love I do send to thee, \
         If you find a place in your heart to love me, \
@@ -39,14 +39,14 @@ $(document).ready(function () {
         So mote it be", "Fesmatos, tribum, ementas asten, nas ex veras, mihan ega petous, varos!"];
 
         var randomSpell;
-
+        
         for (var i = 0; i < 4; i++) {
                 elements[i] = Math.floor(Math.random() * 25 + 7);
-                var imageElement = $("<img>");
-                imageElement.addClass("element-image");
-                imageElement.attr('id', 'img' + i);
-                imageElement.attr("css", 'img' + i);
-                imageElement.attr("data-elementstrength", elements[i]);
+                imageElement[i] = $("<img>");
+                imageElement[i].addClass("element-image");
+                imageElement[i].attr('id', 'img' + i);
+                imageElement[i].attr("css", 'img' + i);
+                imageElement[i].attr("data-elementstrength", elements[i]);
                 $("#element").append(imageElement);
         }
 
@@ -59,14 +59,16 @@ $(document).ready(function () {
         }
 
         function newRound() {
+                elementStrength = 0;
+                for (var i = 0; i < 4; i++) {
+                        sessionStorage.clear("data-elementstrenght", imageElement[i]);
+                        elements[i] = Math.floor(Math.random() * 25 + 7);
+                        imageElement[i].attr("data-elementstrength", elements[i]);
+                }
                 shuffle(spells);
                 randomSpell = spells[Math.floor(Math.random() * spells.length)];
                 compNumber = Math.floor(Math.random() * 83 + 46);
                 user = 0;
-                elementStrength = 0;
-                for (var i = 0; i < 4; i++) {
-                        elements[i] = Math.floor(Math.random() * 25 + 7);
-                }
                 display();
         };
 
