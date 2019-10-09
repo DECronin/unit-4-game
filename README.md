@@ -1,6 +1,6 @@
 # Crystal Elements
-## Element Balancer
-##### unit-4-game
+## Element Balancer Game
+#### unit-4-game
 
 #### Links:
 - [Homework Assignment Repository](https://github.com/UCF-Coding-Boot-Camp/UCF-LKM-FSF-PT-08-2019-U-C/blob/master/04-jquery/02-Homework/Instructions/homework_instructions.md)
