@@ -1,5 +1,5 @@
 # Crystal Elements
-# Element Balancer
+## Element Balancer
 ##### unit-4-game
 
 #### Links:
