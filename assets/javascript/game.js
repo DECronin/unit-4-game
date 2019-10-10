@@ -7,35 +7,35 @@ $(document).ready(function () {
         var elementStrength = 0;
         var user = 0;
         var imageElement = [];
-        var spells = ["My heart ablaze and shining \
-        This love I do send to thee, \
-        If you find a place in your heart to love me, \
-        By the greatest good, So mote it be.", "Tespara Sepera \
-        onpaz eztan, \
-        spas tino.", "Bring me quiet, \
-        Bring me peace, \
-        Ease my dreams, \
-        Nightmares cease", "One coin here, one coin there, \
-        Prosperity is everywhere, \
-        I need some wealth,, \
-        Financial health, \
-        I just need my share.", "Elements, I call on thee, \
-        I ask you to protect and guide me. \
-        Water, please guide my path. \
-        Fire, protect me with your wrath. \
-        Earth, perseverance and strength give to me. \
-        Air, speedy travel and communication is what I ask of thee.\
-        Water, Fire, Earth, and Air, elements one and all,\
-        Let me not stumble, let me not fall.\
-        Help, protect, and guide me is what I ask,\
-        Kind elements protect me,\
-        This is my will, so mote it be!", "The maiden comes to bring us light,\
-        The winter dies and all is bright,\
-        The frozen ground shall disappear,\
-        All shall sprout for Spring is near!", "Wind and Earth now have met and all the Earth is wet.\
-        Thankful are our unworthy souls,\
-        Let us settle down.\
-        Wind and Earth now may parent,\
+        var spells = ["My heart ablaze and shining, <br> \
+        This love I do send to thee, <br> \
+        If you find a place in your heart to love me, <br> \
+        By the greatest good, So mote it be.", "Tespara Sepera <br> \
+        onpaz eztan, <br> \
+        spas tino.", "Bring me quiet, <br> \
+        Bring me peace, <br> \
+        Ease my dreams, <br> \
+        Nightmares cease", "One coin here, one coin there, <br> \
+        Prosperity is everywhere, <br> \
+        I need some wealth, <br> \
+        Financial health, <br> \
+        I just need my share.", "Elements, I call on thee, <br> \
+        I ask you to protect and guide me. <br> \
+        Water, please guide my path. <br> \
+        Fire, protect me with your wrath. <br> \
+        Earth, perseverance and strength give to me. <br> \
+        Air, speedy travel and communication is what I ask of thee.<br> \
+        Water, Fire, Earth, and Air, elements one and all,<br> \
+        Let me not stumble, let me not fall.<br> \
+        Help, protect, and guide me is what I ask,<br> \
+        Kind elements protect me,<br> \
+        This is my will, so mote it be!", "The maiden comes to bring us light,<br> \
+        The winter dies and all is bright,<br> \
+        The frozen ground shall disappear,<br> \
+        All shall sprout for Spring is near!", "Wind and Earth now have met and all the Earth is wet.<br> \
+        Thankful are our unworthy souls,<br> \
+        Let us settle down.<br> \
+        Wind and Earth now may parent,<br> \
         So mote it be", "Fesmatos, tribum, ementas asten, nas ex veras, mihan ega petous, varos!"];
 
         var randomSpell;
@@ -91,7 +91,7 @@ $(document).ready(function () {
                 $("#user").text(user);
                 $("#wins").text(wins);
                 $("#loses").text(loses);
-                $("#in-depth").text(randomSpell);
+                $("#in-depth").html(randomSpell);
         }
 
         $(".element-image").on("click", function () {
